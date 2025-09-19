@@ -5,7 +5,7 @@ b.	Nhận một chuỗi ngẫu nhiên là danh sách các một số tên miền
 Ví dụ: giHgWHwkLf0Rd0.io, I7jpjuRw13D.io, wXf6GP3KP.vn, MdpIzhxDVtTFTF.edu, TUHuMfn25chmw.vn, HHjE9.com, 4hJld2m2yiweto.vn, y2L4SQwH.vn, s2aUrZGdzS.com, 4hXfJe9giAA.edu
 c.	Tìm kiếm các tên miền .edu và gửi lên server
 Ví dụ: MdpIzhxDVtTFTF.edu, 4hXfJe9giAA.edu
-d.	Đóng kết nối và kết thúc chương trình.
+d.	Đóng kết nối và kết thúc chương trình...
  */
 import java.io.*;
 import java.net.Socket;
@@ -66,4 +66,5 @@ public class BLhvQ8aV_TCP_CharacterStream {
         }
     }    
 }
+
 
