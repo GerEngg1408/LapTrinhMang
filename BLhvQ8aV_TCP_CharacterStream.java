@@ -1,0 +1,64 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+import java.io.*;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
+/**
+ *
+ * @author ngduc
+ */
+public class BLhvQ8aV_TCP_CharacterStream {
+    public static void main(String[] args) {
+        String serverAddress = "203.162.10.109";
+        int port = 2208;
+        String studentCode = "B22DCVT025"; // thay bằng MSSV của anh
+        String qCode = "BLhvQ8aV";
+
+        try (Socket socket = new Socket(serverAddress, port);
+             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            socket.setSoTimeout(5000); // timeout 5s
+
+            // a) Gửi "studentCode;qCode"
+            String request = studentCode + ";" + qCode;
+            writer.write(request);
+            writer.newLine(); // rất quan trọng để server đọc được hết
+            writer.flush();
+            System.out.println("Sent: " + request);
+
+            // b) Nhận danh sách domain
+            String response = reader.readLine();
+            System.out.println("From server: " + response);
+
+            // c) Tìm các domain .edu
+            StringBuilder eduDomains = new StringBuilder();
+            if (response != null && !response.isEmpty()) {
+                String[] tokens = response.split(",");
+                for (String domain : tokens) {
+                    domain = domain.trim();
+                    if (domain.endsWith(".edu")) {
+                        if (eduDomains.length() > 0) eduDomains.append(", ");
+                        eduDomains.append(domain);
+                    }
+                }
+            }
+
+            String result = eduDomains.toString();
+            writer.write(result);
+            writer.newLine();
+            writer.flush();
+            System.out.println("Sent: " + result);
+
+            System.out.println("End program");
+
+        } catch (SocketTimeoutException e) {
+            System.err.println("Timeout khi chờ dữ liệu từ server");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }    
+}
