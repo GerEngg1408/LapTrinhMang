@@ -7,7 +7,7 @@ c. Tính số lần đổi chiều và tổng độ biến thiên trong dãy s�
 - Đổi chiều: Khi dãy chuyển từ tăng sang giảm hoặc từ giảm sang tăng 
 -   Độ biến thiên: Tổng giá trị tuyệt đối của các hiệu số liên tiếp
 Gửi lần lượt lên server: số nguyên đại diện cho số lần đổi chiều, sau đó là số nguyên đại diện cho tổng độ biến thiên. Ví dụ: Với mảng "1,3,2,5,4,7,6", số lần đổi chiều: 5 lần, Tổng độ biến thiên 11 -> Gửi lần lượt số nguyên 5 và 11 lên server.
-d. Đóng kết nối và kết thúc chương trình.
+d. Đóng kết nối và kết thúc chương trình..
  */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -80,3 +80,4 @@ public class XLwUbQpI_TCP_DataStream {
         }
     }    
 }
+
