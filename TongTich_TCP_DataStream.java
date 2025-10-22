@@ -9,10 +9,6 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
-/**
- *
- * @author ngduc
- */
 public class QFWmW74a_TCP_DataStream {
        public static void main(String[] args) {
         String serverAddress = "203.162.10.109"; // địa chỉ server
@@ -54,4 +50,5 @@ public class QFWmW74a_TCP_DataStream {
         }
     }
 }
+
 
