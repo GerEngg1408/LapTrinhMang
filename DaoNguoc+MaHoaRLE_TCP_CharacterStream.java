@@ -12,10 +12,7 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-/**
- *
- * @author ngduc
- */
+
 public class uGUZJgz5_TCP_CharacterStream {
     public static void main(String[] args) {
         String host = "203.162.10.109";   // thay bằng IP server nếu cần
@@ -95,4 +92,5 @@ public class uGUZJgz5_TCP_CharacterStream {
         return encoded.toString();
     }    
 }
+
 
