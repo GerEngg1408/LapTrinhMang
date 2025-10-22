@@ -12,10 +12,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import TCP.Address;
-/**
- *
- * @author ngduc
- */
+
 public class eTYdhrdX_TCP_ObjectStream {
     public static void main(String[] args) {
         String host = "203.162.10.109";   // thay bằng IP server nếu cần
@@ -90,4 +87,5 @@ public class eTYdhrdX_TCP_ObjectStream {
         return code.replaceAll("[^0-9-]", "");
     }    
 }
+
 
