@@ -12,10 +12,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Arrays;
-/**
- *
- * @author ngduc
- */
+
 public class oiVbmGCJ_TCP_ByteStream {
         public static void main(String[] args) {
         String host = "203.162.10.109";   // thay bằng IP server nếu cần
@@ -79,4 +76,5 @@ public class oiVbmGCJ_TCP_ByteStream {
         }
     }
 }
+
 
