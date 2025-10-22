@@ -29,19 +29,13 @@ public class UDP_DataType_X1Y2Z3 {
             socket = new DatagramSocket();
             socket.setSoTimeout(5000); // timeout 5s
             InetAddress server = InetAddress.getByName(serverAddress);
-
-            // ===============================
             // a) Gửi thông điệp ";studentCode;qCode"
-            // ===============================
             String request = ";" + studentCode + ";" + qCode;
             byte[] sendData = request.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, server, port);
             socket.send(sendPacket);
             System.out.println("Sent: " + request);
-
-            // ===============================
             // b) Nhận thông điệp "requestId;a;b"
-            // ===============================
             byte[] receiveData = new byte[8192];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             socket.receive(receivePacket);
@@ -54,23 +48,16 @@ public class UDP_DataType_X1Y2Z3 {
             String requestId = parts[0];
             BigInteger a = new BigInteger(parts[1]);
             BigInteger b = new BigInteger(parts[2]);
-
-            // ===============================
             // c) Tính tổng và hiệu
-            // ===============================
             BigInteger sum = a.add(b);
             BigInteger diff = a.subtract(b);
-
             // Tạo chuỗi kết quả: "requestId;sum,difference"
             String response = requestId + ";" + sum.toString() + "," + diff.toString();
             byte[] resultData = response.getBytes();
             DatagramPacket resultPacket = new DatagramPacket(resultData, resultData.length, server, port);
             socket.send(resultPacket);
             System.out.println("Sent: " + response);
-
-            // ===============================
             // d) Đóng socket và kết thúc
-            // ===============================
             System.out.println("End program");
 
         } catch (Exception e) {
@@ -83,3 +70,4 @@ public class UDP_DataType_X1Y2Z3 {
     }
     
 }
+
