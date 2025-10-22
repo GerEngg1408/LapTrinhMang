@@ -15,13 +15,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 public class trSQ1EYI_TCP_ByteStream {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-
-
 	// TODO Auto-generated method stub
 	String serverAddress = "203.162.10.109";
 	int port = 2206;
@@ -72,6 +66,7 @@ public class trSQ1EYI_TCP_ByteStream {
 	}
 
 }
+
 
 
 
