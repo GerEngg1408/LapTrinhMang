@@ -12,10 +12,7 @@ d. Đóng kết nối và kết thúc chương trình..
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
-/**
- *
- * @author ngduc
- */
+
 public class XLwUbQpI_TCP_DataStream {
     public static void main(String[] args) {
         String host = "203.162.10.109";   // thay bằng IP server nếu cần
@@ -80,4 +77,5 @@ public class XLwUbQpI_TCP_DataStream {
         }
     }    
 }
+
 
