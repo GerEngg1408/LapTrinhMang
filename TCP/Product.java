@@ -1,31 +1,23 @@
 package TCP;
-
-import java.io.Serializable;
-
-public class Product implements Serializable {
-    private static final long serialVersionUID = 20231107L;
-
-    private int id;
-    private String name;
+import java.io.*;
+public class Product implements Serializable{
+    private static final long serialVersionUID = 20231107;
+    private int id, discount;
     private double price;
-    private int discount;
-
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
-
-    public int getDiscount() { return discount; }
-    public void setDiscount(int discount) { this.discount = discount; }
-
+    private String name;
+    public Product(int id, double price, String name) {
+        this.id = id;
+        this.price = price;
+        this.name = name;
+    }
+    public double getPrice() {
+        return price;
+    }
+    public void setDiscount(int discount) {
+        this.discount = discount;
+    }
     @Override
     public String toString() {
-        return "Product{id=" + id + ", name='" + name + "', price=" + price + ", discount=" + discount + "}";
+        return "Product{" + "id=" + id + ", discount=" + discount + ", price=" + price + ", name=" + name + '}';
     }
 }
-
-
